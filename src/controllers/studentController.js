@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const {hashPassword} = require('../utils/passwordUtil');
 
 const studentsFilePath = path.join(__dirname, '../../data/students.json');
 
@@ -41,19 +42,20 @@ const getStudentById = (req, res) => {
 const getStudentByAdmissionNumberAndPassword = (admissionNumber, password) => {
     try {
         const students = JSON.parse(fs.readFileSync(studentsFilePath, 'utf-8'));
-        return students.find((s) => s.admissionNumber === admissionNumber && s.password === password);
+        return students.find((s) => s.admissionNumber === admissionNumber);
     } catch (error) {
         return null;
     }
 };
 
-const createStudent = (req, res) => {
+const createStudent = async (req, res) => {
     try {
         const students = JSON.parse(fs.readFileSync(studentsFilePath, 'utf-8'));
         const newStudent = {
             id: students.length + 1,
             ...req.body,
         };
+        newStudent.password = await hashPassword(newStudent.password);
         students.push(newStudent);
         fs.writeFileSync(studentsFilePath, JSON.stringify(students, null, 2));
         res.status(201).json({

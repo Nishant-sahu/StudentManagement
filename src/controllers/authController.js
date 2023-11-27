@@ -7,12 +7,11 @@ const generateAccessToken = (user) => {
     return jwt.sign(user, jwtSecretKey, { expiresIn: '15m' });
 };
 
-const login = (req, res) => {
+const login = async (req, res) => {
     try {
         const { admissionNumber, password } = req.body;
         const student = getStudentByAdmissionNumberAndPassword(admissionNumber, password);
-
-        if (student && comparePassword(password, student.password)) {
+        if (student && await comparePassword(password, student.password)) {
             const accessToken = generateAccessToken({ admissionNumber: student.admissionNumber });
             res.status(200).json({
                 accessToken,

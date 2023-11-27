@@ -4,7 +4,7 @@ const { login } = require('../controllers/authController');
 const { csrfProtection } = require('../middleware/csrfMiddleware');
 
 
-router.post('/login', csrfProtection , login);
+router.post('/login' , login);
 
 
 module.exports = router;

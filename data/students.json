@@ -118,5 +118,65 @@
     "mobileNumber": "8888888888",
     "address": "444 Elm Street",
     "password": "newstudentpassword"
+  },
+  {
+    "id": 11,
+    "name": "Nishant Rawat",
+    "rollNumber": "129",
+    "admissionNumber": "462",
+    "class": "10",
+    "section": "C",
+    "gender": "Male",
+    "mobileNumber": "8888888888",
+    "address": "444 Elm Street",
+    "password": {}
+  },
+  {
+    "id": 12,
+    "name": "Nishant Rawat",
+    "rollNumber": "129",
+    "admissionNumber": "462",
+    "class": "10",
+    "section": "C",
+    "gender": "Male",
+    "mobileNumber": "8888888888",
+    "address": "444 Elm Street",
+    "password": {}
+  },
+  {
+    "id": 13,
+    "name": "Nishant Rawat",
+    "rollNumber": "129",
+    "admissionNumber": "462",
+    "class": "10",
+    "section": "C",
+    "gender": "Male",
+    "mobileNumber": "8888888888",
+    "address": "444 Elm Street",
+    "password": {}
+  },
+  {
+    "id": 14,
+    "name": "Nishant Rawat",
+    "rollNumber": "129",
+    "admissionNumber": "462",
+    "class": "10",
+    "section": "C",
+    "gender": "Male",
+    "mobileNumber": "8888888888",
+    "address": "444 Elm Street",
+    "password": "$2b$10$EGgFDlidLfXn/MpuECmrVuQ865rCHlS.Ls.Yho6q4zCxpnV75/nBm"
+  },
+  {
+    "id": 15,
+    "name": "Nishant Singh Rawat",
+    "rollNumber": "129",
+    "admissionNumber": "4621",
+    "class": "10",
+    "section": "C",
+    "gender": "Male",
+    "mobileNumber": "8888888888",
+    "address": "444 Elm Street",
+    "password": "$2b$10$hdOjiMw7wWrIw3tx2/AoQOgm8XK4qSNWQ/u90CwDwFwPX5yLMBhGy"
   }
 ]
